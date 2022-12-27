@@ -11,7 +11,7 @@ namespace Finanzas_Personal_App.Controllers
     {
 
 
-       
+    
        
         [HttpGet("{id}")]
         public Ingreso? Get(int id)

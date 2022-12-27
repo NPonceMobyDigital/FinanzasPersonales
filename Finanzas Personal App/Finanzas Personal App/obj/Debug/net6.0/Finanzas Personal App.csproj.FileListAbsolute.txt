@@ -64,3 +64,76 @@ C:\Users\Usuario\Desktop\MobyDigital\Finanzas App\Finanzas Personal App\Finanzas
 C:\Users\Usuario\Desktop\MobyDigital\Finanzas App\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Entities.dll
 C:\Users\Usuario\Desktop\MobyDigital\Finanzas App\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Business.pdb
 C:\Users\Usuario\Desktop\MobyDigital\Finanzas App\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Entities.pdb
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.csproj.AssemblyReference.cache
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.AssemblyInfoInputs.cache
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.AssemblyInfo.cs
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.csproj.CoreCompileInputs.cache
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.MvcApplicationPartsAssemblyInfo.cs
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.MvcApplicationPartsAssemblyInfo.cache
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\refint\Finanzas Personal App.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.pdb
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\appsettings.Development.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\appsettings.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Finanzas Personal App.exe
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Finanzas Personal App.deps.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Finanzas Personal App.runtimeconfig.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Finanzas Personal App.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Finanzas Personal App.pdb
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\EntityFramework.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.CodeDom.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Business.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Entities.dll
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Business.pdb
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\bin\Debug\net6.0\Entities.pdb
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\staticwebassets.build.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\staticwebassets.development.json
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\scopedcss\bundle\Finanzas Personal App.styles.css
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.csproj.CopyComplete
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\Finanzas Personal App.genruntimeconfig.cache
+D:\FinanzasMoby\FinanzasPersonales\Finanzas Personal App\Finanzas Personal App\obj\Debug\net6.0\ref\Finanzas Personal App.dll

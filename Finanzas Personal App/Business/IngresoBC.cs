@@ -9,7 +9,13 @@ namespace Business
 {
     public class IngresoBC
     {
-        //Crea nuevo Ingreso
+        /// <summary>
+        /// Este metodo Agrega un ingreso 
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="oIngreso"></param>
+        /// <returns>devuelve un json del ingreso  </returns>
+        /// 
         public Ingreso agregarIngreso(FinanzasPersonalesContext db, Ingreso oIngreso)
         {
             db.Ingresos.Add(oIngreso);
@@ -17,9 +23,25 @@ namespace Business
             return oIngreso;
         }
 
+        /// <summary>
+        /// Este metodo obtiene un ingreso por id
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <returns>devuelve un json por su id </returns>
+        public Ingreso? obtenerIngreso(FinanzasPersonalesContext db, int id)
+        {
+            return db.Ingresos.FirstOrDefault(a => a.IdIngreso == id);
+        }
 
-        //Modifica Ingreso
-        //Agregar validacion por Null
+        /// <summary>
+        /// Este metodo actualiza un ingreso 
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <param name="Detalle"></param>
+        /// <param name="Monto"></param>
+        /// <returns>devuelve un json con los datos actualizados</returns>
         public Ingreso modificarIngreso(FinanzasPersonalesContext db, int id, string Detalle, int Monto)
         {
             Ingreso? oIngresoViejo = db.Ingresos.FirstOrDefault(a => a.IdIngreso == id);
@@ -28,14 +50,6 @@ namespace Business
             db.SaveChanges();
             return oIngresoViejo;
         }
-
-        //Obtiene Ingreso por id
-
-        public Ingreso? obtenerIngreso(FinanzasPersonalesContext db, int id)
-        {
-            return db.Ingresos.FirstOrDefault(a => a.IdIngreso == id);
-        }
-
 
     }
 }
