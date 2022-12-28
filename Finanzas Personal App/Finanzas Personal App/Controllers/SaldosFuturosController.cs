@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Business;
+using Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Finanzas_Personal_App.Controllers
@@ -7,5 +9,52 @@ namespace Finanzas_Personal_App.Controllers
     [ApiController]
     public class SaldosFuturosController : ControllerBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public SaldosFuturo? Get(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                return new SaldosFuturoBC().obtenerSaldosFuturo(db, id);
+            }
+
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="osaldosFuturo"></param>
+        [HttpPost]
+        public void Post([FromBody] SaldosFuturo osaldosFuturo)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldosFuturoBC().agregarSaldosFuturo(db, osaldosFuturo);
+
+            }
+
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Detalle"></param>
+        /// <param name="Monto"></param>
+        [HttpPut("{id}")]
+        public void Put(int id, string Detalle, int Monto)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldosFuturoBC().modificarSaldosFuturo(db, id, Detalle, Monto);
+            }
+
+        }
     }
 }

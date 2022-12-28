@@ -31,7 +31,7 @@ namespace Business
         /// <param name="Detalle"></param>
         /// <param name="Monto"></param>
         /// <returns>devuelve un json con los datos actualizados</returns>
-        public EgresosFuturo modificarSaldosFuturo(FinanzasPersonalesContext db, int id, string Detalle, int Monto)
+        public EgresosFuturo modificarEgresosFuturo(FinanzasPersonalesContext db, int id, string Detalle, int Monto)
         {
             EgresosFuturo? oEgresoViejo = db.EgresosFuturos.FirstOrDefault(a => a.IdEgresosFuturos == id);
             oEgresoViejo.Detalle = Detalle;
@@ -47,7 +47,7 @@ namespace Business
         /// <param name="id"></param>
         /// <returns>devuelve un json por su id</returns>
 
-        public EgresosFuturo? obtenerSaldosFuturo(FinanzasPersonalesContext db, int id)
+        public EgresosFuturo? obtenerEgresosFuturo(FinanzasPersonalesContext db, int id)
         {
             return db.EgresosFuturos.FirstOrDefault(a => a.IdEgresosFuturos == id);
         }

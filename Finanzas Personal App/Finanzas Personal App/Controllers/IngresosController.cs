@@ -10,9 +10,11 @@ namespace Finanzas_Personal_App.Controllers
     public class IngresosController : ControllerBase
     {
 
-
-    
-       
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public Ingreso? Get(int id)
         {
@@ -24,7 +26,10 @@ namespace Finanzas_Personal_App.Controllers
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oIngreso"></param>
         [HttpPost]
         public void Post([FromBody] Ingreso oIngreso)
         {
@@ -37,7 +42,12 @@ namespace Finanzas_Personal_App.Controllers
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Detalle"></param>
+        /// <param name="Monto"></param>
         [HttpPut("{id}")]
         public void Put(int id, string Detalle, int Monto)
         {
@@ -47,7 +57,6 @@ namespace Finanzas_Personal_App.Controllers
             }
 
         }
-
 
     }
 }

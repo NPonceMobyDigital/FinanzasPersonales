@@ -9,6 +9,12 @@ namespace Finanzas_Personal_App.Controllers
     [ApiController]
     public class SaldosController : ControllerBase
     {
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public Saldo? Get(int id)
         {
@@ -19,6 +25,39 @@ namespace Finanzas_Personal_App.Controllers
 
         }
 
-        
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="osaldo"></param>
+        [HttpPost]
+        public void Post([FromBody] Saldo osaldo)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldoBC().agregarSaldo(db, osaldo);
+
+            }
+
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Detalle"></param>
+        /// <param name="Monto"></param>
+        [HttpPut("{id}")]
+        public void Put(int id, string Detalle, int Monto)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldoBC().modificarSaldo(db, id, Detalle, Monto);
+            }
+
+        }
+
+
     }
 }

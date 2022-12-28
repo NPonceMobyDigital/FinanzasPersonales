@@ -9,7 +9,11 @@ namespace Finanzas_Personal_App.Controllers
     [ApiController]
     public class EgresosController : ControllerBase
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public Egreso? Get(int id)
         {
@@ -19,28 +23,36 @@ namespace Finanzas_Personal_App.Controllers
             }
 
         }
+        
 
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="oEgreso"></param>
         [HttpPost]
-        public void Post([FromBody] Ingreso oIngreso)
+        public void Post([FromBody] Egreso oEgreso)
         {
             using (var db = new FinanzasPersonalesContext())
             {
-                new IngresoBC().agregarIngreso(db, oIngreso);
+                new EgresoBC().agregarEgreso(db, oEgreso);
 
             }
 
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Detalle"></param>
+        /// <param name="Monto"></param>
         [HttpPut("{id}")]
         public void Put(int id, string Detalle, int Monto)
         {
             using (var db = new FinanzasPersonalesContext())
             {
-                new IngresoBC().modificarIngreso(db, id, Detalle, Monto);
+                new EgresoBC().modificarEgreso(db, id, Detalle, Monto);
             }
 
         }
