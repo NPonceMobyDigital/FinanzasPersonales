@@ -51,5 +51,7 @@ namespace Business
         {
             return db.SaldosFuturos.FirstOrDefault(a => a.IdMontoFuturo == id);
         }
+
+       
     }
 }

@@ -11,10 +11,10 @@ namespace Finanzas_Personal_App.Controllers
     {
 
         /// <summary>
-        /// 
+        /// este metodo obtiene un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>devuelve un json con los datos del id</returns>
         [HttpGet("{id}")]
         public Ingreso? Get(int id)
         {
@@ -27,7 +27,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un ingreso  por id
         /// </summary>
         /// <param name="oIngreso"></param>
         [HttpPost]
@@ -43,7 +43,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Detalle"></param>

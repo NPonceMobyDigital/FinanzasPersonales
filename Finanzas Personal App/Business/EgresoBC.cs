@@ -53,5 +53,12 @@ namespace Business
             return db.Egresos.FirstOrDefault(a => a.IdEgreso == id);
         }
 
+        public Egreso eliminarEgreso(FinanzasPersonalesContext db, int id)
+        {
+            Egreso? oEgresoViejo = db.Egresos.Find(id);        
+            db.Remove(oEgresoViejo);
+            db.SaveChanges();
+            return oEgresoViejo;
+        }
     }
 }

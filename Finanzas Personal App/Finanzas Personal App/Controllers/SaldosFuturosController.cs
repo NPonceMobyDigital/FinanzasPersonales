@@ -10,7 +10,7 @@ namespace Finanzas_Personal_App.Controllers
     public class SaldosFuturosController : ControllerBase
     {
         /// <summary>
-        /// 
+        /// este metodo obtiene un saldo  por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un saldo  por id
         /// </summary>
         /// <param name="osaldosFuturo"></param>
         [HttpPost]
@@ -42,7 +42,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un saldo  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Detalle"></param>
@@ -53,6 +53,16 @@ namespace Finanzas_Personal_App.Controllers
             using (var db = new FinanzasPersonalesContext())
             {
                 new SaldosFuturoBC().modificarSaldosFuturo(db, id, Detalle, Monto);
+            }
+
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldosFuturoBC().eliminarSaldoFuturo(db, id);
             }
 
         }

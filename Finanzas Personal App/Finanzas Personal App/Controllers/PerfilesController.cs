@@ -10,7 +10,7 @@ namespace Finanzas_Personal_App.Controllers
     public class PerfilesController : ControllerBase
     {
         /// <summary>
-        /// 
+        /// este metodo obtiene un perfil  por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un perfil  
         /// </summary>
         /// <param name="operfile"></param>
         [HttpPost]
@@ -42,7 +42,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un perfil  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Usuario"></param>
