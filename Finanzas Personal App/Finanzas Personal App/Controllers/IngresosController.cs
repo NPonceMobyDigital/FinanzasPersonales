@@ -58,5 +58,15 @@ namespace Finanzas_Personal_App.Controllers
 
         }
 
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new IngresoBC().eliminarIngreso(db, id);
+            }
+
+        }
+
     }
 }

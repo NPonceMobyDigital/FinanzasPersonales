@@ -44,12 +44,19 @@ namespace Business
         /// <returns>devuelve un json con los datos actualizados</returns>
         public Ingreso modificarIngreso(FinanzasPersonalesContext db, int id, string Detalle, int Monto)
         {
-            Ingreso? oIngresoViejo = db.Ingresos.FirstOrDefault(a => a.IdIngreso == id);
+            Ingreso? oIngresoViejo = db.Ingresos.First(a => a.IdIngreso == id);
             oIngresoViejo.Detalle = Detalle;
             oIngresoViejo.Monto = Monto;
             db.SaveChanges();
             return oIngresoViejo;
         }
 
+        public Ingreso eliminarIngreso(FinanzasPersonalesContext db, int id)
+        {
+            Ingreso? oIngresoViejo = db.Ingresos.Find(id);
+            db.Remove(oIngresoViejo);
+            db.SaveChanges();
+            return oIngresoViejo;
+        }
     }
 }

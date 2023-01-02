@@ -50,8 +50,19 @@ namespace Business
         {
             return db.Saldos.FirstOrDefault(a => a.IdSaldo == id);
         }
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Saldo eliminarSaldo(FinanzasPersonalesContext db, int id)
+        {
+            Saldo? osaldoViejo = db.Saldos.Find(id);
+            db.Remove(osaldoViejo);
+            db.SaveChanges();
+            return osaldoViejo;
+        }
     }
 }
 
