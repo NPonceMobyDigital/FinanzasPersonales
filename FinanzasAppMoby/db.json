@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "Detalle": "some comment",
+      "postId": 100000
+    }
+  ],
+  "bills": [
+    {
+      "id": 2,
+      "Detalle": "Deportes",
+      "postId": 150000
+    },
+    {
+      "id": 3,
+      "Detalle": "viajes",
+      "postId": 14600
+    },
+    {
+      "id": 4,
+      "Detalle": "Salidas",
+      "postId": 15000
+    },
+    {
+      "id": 5,
+      "Detalle": "Comida",
+      "postId": 21657
+    },
+    {
+      "id": 1,
+      "Detalle": "Alquiler",
+      "postId": 23000
+    }
+  ],
+  "profile": [
+  {
+    "name": "Sergio el Kun Aguero"
+  },
+  {
+    "name": "Leonel Messi"
+  }
+]
+}
