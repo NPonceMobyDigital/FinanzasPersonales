@@ -1,20 +1,13 @@
 export class LoginStar
 {
-    private email:string;
-    private password:string;
+    email:string = "";
+    password:string = "";
 
-    constructor(email_:string,password:string)
+    constructor(email:string,password:string)
     {
-        this.email=email_;
-        this.password=this.pass;
+        this.email=email;
+        this.password=password;
     }
 
-    public get email_() {
-        return this.email;
-    }
-
-    public get pass() {
-        return this.password;
-    }
-
+  
 }

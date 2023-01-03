@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
       //Ingreso los valores en el login y el login en el metodo starSession
       let login:LoginStar=new LoginStar(accesEmail,accesPass) 
       this.myService.starSession(login).subscribe(respuestaOk=>{
+        document.getElementById("gobutton")?.click(); 
         this.route.navigate(['/home'])
       });
      

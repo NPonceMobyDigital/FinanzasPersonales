@@ -10,9 +10,9 @@ export class LoginService {
 
   constructor(private http:HttpClient) { }
 
-  starSession(loginStar:LoginStar):Observable<any>
+  starSession(login:LoginStar):Observable<any>
   {
-    return this.http.post('http://localhost:3000/profile',loginStar);
+    return this.http.post('http://localhost:3000/profile',login);
   }
 
   
