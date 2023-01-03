@@ -42,10 +42,12 @@
   ],
   "profile": [
   {
-    "name": "Sergio el Kun Aguero"
+    "email": "sergioaguero@gmail.com",
+    "password": "Kun2022"
   },
   {
-    "name": "Leonel Messi"
+    "email": "leonelmessi@moby.com",
+    "password": "LeoMessi2022"
   }
 ]
 }
