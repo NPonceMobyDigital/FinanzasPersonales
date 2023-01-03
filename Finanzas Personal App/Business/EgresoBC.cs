@@ -60,7 +60,11 @@ namespace Business
         /// <returns></returns>
         public Egreso eliminarEgreso(FinanzasPersonalesContext db, int id)
         {
-            Egreso? oEgresoViejo = db.Egresos.Find(id);        
+            Egreso? oEgresoViejo = db.Egresos.Find(id);
+            if (oEgresoViejo == null)
+            {
+                return null;
+            }
             db.Remove(oEgresoViejo);
             db.SaveChanges();
             return oEgresoViejo;

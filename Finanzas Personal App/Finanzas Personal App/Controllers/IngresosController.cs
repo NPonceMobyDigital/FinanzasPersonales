@@ -57,7 +57,10 @@ namespace Finanzas_Personal_App.Controllers
             }
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

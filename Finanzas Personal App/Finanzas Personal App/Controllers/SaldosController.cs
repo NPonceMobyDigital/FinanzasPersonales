@@ -58,7 +58,7 @@ namespace Finanzas_Personal_App.Controllers
 
         }
         /// <summary>
-        /// 
+        /// este metodo elimina un registro
         /// </summary>
         /// <param name="id"></param>
         [HttpDelete("{id}")]

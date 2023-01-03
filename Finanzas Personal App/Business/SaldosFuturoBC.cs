@@ -33,11 +33,19 @@ namespace Business
         /// <returns>devuelve un json con los datos actualizados</returns>
         public SaldosFuturo modificarSaldosFuturo(FinanzasPersonalesContext db, int id, string Descripcion, int Monto)
         {
-            SaldosFuturo? osaldoViejo = db.SaldosFuturos.FirstOrDefault(a => a.IdMontoFuturo == id);
-            osaldoViejo.Descripcion = Descripcion;
-            osaldoViejo.Monto = Monto;
-            db.SaveChanges();
-            return osaldoViejo;
+            SaldosFuturo? oIngresoViejo = new SaldosFuturo();
+            if (Descripcion != null)
+            {
+                oIngresoViejo.IdMontoFuturo = id;
+                oIngresoViejo.Descripcion = Descripcion;
+                db.SaveChanges();
+            }
+            else
+            {
+                return null;
+            }
+            db.Saldos.First(a => a.IdSaldo == id);
+            return oIngresoViejo;
         }
 
         /// <summary>
@@ -49,9 +57,29 @@ namespace Business
 
         public SaldosFuturo? obtenerSaldosFuturo(FinanzasPersonalesContext db, int id)
         {
-            return db.SaldosFuturos.FirstOrDefault(a => a.IdMontoFuturo == id);
+            return db.SaldosFuturos.First(a => a.IdMontoFuturo == id);
         }
 
-       
+        /// <summary>
+        /// este metodo elimina un registro
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
+        public SaldosFuturo eliminarSaldoFuturo(FinanzasPersonalesContext db, int id)
+        {
+            SaldosFuturo? osaldoViejo = db.SaldosFuturos.Find(id);
+            if (osaldoViejo==null)
+            {
+                return null;
+            }
+
+            db.Remove(osaldoViejo);
+            db.SaveChanges();
+            return osaldoViejo;
+             
+        }
+
     }
 }

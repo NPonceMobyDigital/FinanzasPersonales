@@ -56,7 +56,10 @@ namespace Finanzas_Personal_App.Controllers
             }
 
         }
-//dgdg//
+        /// <summary>
+        /// este metodo elimina un registro
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

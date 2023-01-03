@@ -49,9 +49,19 @@ namespace Business
             db.SaveChanges();
             return operfilViejo;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Perfile eliminarPerfile(FinanzasPersonalesContext db, int id)
         {
             Perfile? operfilViejo = db.Perfiles.Find(id);
+            if (operfilViejo == null)
+            {
+                return null;
+            }
             db.Remove(operfilViejo);
             db.SaveChanges();
             return operfilViejo;
