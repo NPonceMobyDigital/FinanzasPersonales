@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginStar } from 'src/app/Models/loginStar';
 import { LoginService } from 'src/app/service/login/login.service';
@@ -11,13 +11,12 @@ import { LoginService } from 'src/app/service/login/login.service';
 })
 export class LoginComponent implements OnInit {
   form:FormGroup;
- 
+  
 
+  constructor(private formBuilder:FormBuilder,private myService:LoginService,private route:Router) {  
 
-  constructor(private formBuilder:FormBuilder,private myService:LoginService,private route:Router) { 
+    //se agregan validaciones para la ruta login
     this.form=this.formBuilder.group({
-      email:['',[Validators.required,Validators.email]],
-      pass:['',[Validators.required,Validators.minLength(8)]],
       accesEmail:['',[Validators.required,Validators.email]],
       accesPass:['',[Validators.required,Validators.minLength(8)]]
     })
@@ -27,22 +26,18 @@ export class LoginComponent implements OnInit {
   {
     return this.form.get("accesEmail");
   }
-  get Email()
-  {
-    return this.form.get("Email");
-  }
   get accesPass():any
   {
     return this.form.get("accesPass");
   }
-  get Pass()
-  {
-    return this.form.get("Pass");
-  }
+  
 
 
   ngOnInit(): void {
   }
+
+
+ 
 
   login()
   {
@@ -52,22 +47,42 @@ export class LoginComponent implements OnInit {
       //recupero los datos ingresados en el formulario 
       let accesEmail:string=this.form.get('accesEmail')?.value;
       let accesPass:string=this.form.get('accesPass')?.value; 
+
+
+
       //Ingreso los valores en el login y el login en el metodo starSession
-      let login:LoginStar=new LoginStar(accesEmail,accesPass) 
-      this.myService.starSession(login).subscribe(respuestaOk=>{
-        document.getElementById("gobutton")?.click(); 
-        this.route.navigate(['/home'])
+      let login:LoginStar=new LoginStar(accesPass,accesEmail) 
+      this.myService.starSession(login).subscribe({
+         next:(data) =>{
+          console.log(data);
+          // esta entrando siempre y cuando el service recibe data.
+          // revisar desde el back encasa de estar autentificado enviar data, si no enviar respueta vacia
+          if (data != null)
+          {
+            this.form.reset;
+            this.route.navigate(['/home'])  
+          }
+          else 
+          {
+            alert("wrong password or username")
+          }
+           
+         },
+        
+
       });
-     
-      
+
+ 
     }
     else
     {
-      alert("Some of the entered values ​​are incorrect");
+      alert("Some of the entered values are incorrect");
       this.form.markAllAsTouched();
     }
-    //Llamada al servicio y envio de datos al Login
     this.form.reset();
   } 
 
-}
+  
+  } 
+
+

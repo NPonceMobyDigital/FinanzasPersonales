@@ -50,11 +50,11 @@
                 </div>    
                 <div class="px-lg-5 py-lg-4 p4 text-end">
                     <h1 class="font-weight-bold mb-4">Welcome</h1>
-                    <form [formGroup]="form">
+                    <form [formGroup]="form" (ngSubmit)="($event)">
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
                             <span class="border border-primary">
-                                <input type="email"  [formControl]="accesEmail" class="form-control border-2" id="exampleInputEmail1"
+                                <input type="email" [formControl]="accesEmail" class="form-control border-2" name="accesEmail"
                                     aria-describedby="emailHelp">
                                     <div *ngIf="accesEmail?.invalid && (accesEmail?.dirty || accesEmail?.touched)" class="text-danger">
                                         <div *ngIf="accesEmail?.errors?.['required']">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputPassword1" class="form-label font-weight-bold">Password</label>
-                            <input type="password" [formControl]="accesPass"class="form-control border-2 mb-2" id="exampleInputPassword1">
+                            <input type="password" [formControl]="accesPass" class="form-control border-2 mb-2" name="accesPass">
                                 <div *ngIf="accesPass?.invalid && (accesPass?.dirty || accesPass?.touched)" class="text-danger">
                                     <div *ngIf="accesPass?.errors?.['required']">
                                         Password is required
@@ -77,7 +77,7 @@
                             <a href="#" id="emailHelp" class="form-text text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalLabelPass">Did you forget
                                 your password?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" id="#gobutton" routerLink="/home">Go!</button>
+                        <button type="submit" class="btn btn-primary w-100" id="gobutton" (click)="login()">Go!</button>
                     </form>
                     <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p4">
                         <a href="#"  class="form-text text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">Create new account</a>
@@ -100,11 +100,11 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" >
+                            <input type="email" class="form-control" id="EmailCreate" >
                           </div>
                           <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Password</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" >
+                            <input type="email" class="form-control" id="PasswordCreate" >
                           </div>
                     </div>
                     <div class="modal-footer">
@@ -127,7 +127,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" >
+                            <input type="email" class="form-control" id="EmailRecuperate" >
                           </div>
                     </div>
                     <div class="modal-footer">

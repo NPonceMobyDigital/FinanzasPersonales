@@ -1,7 +1,7 @@
 export class LoginStar
 {
-    email:string = "";
-    password:string = "";
+    email:string;
+    password:string;
 
     constructor(email:string,password:string)
     {

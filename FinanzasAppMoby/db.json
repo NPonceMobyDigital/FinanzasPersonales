@@ -40,14 +40,8 @@
       "postId": 23000
     }
   ],
-  "profile": [
-  {
-    "email": "sergioaguero@gmail.com",
-    "password": "Kun2022"
-  },
-  {
-    "email": "leonelmessi@moby.com",
-    "password": "LeoMessi2022"
+  "profile": {
+    "email": "Ese36429770",
+    "password": "leoMessi@moby.com"
   }
-]
 }
