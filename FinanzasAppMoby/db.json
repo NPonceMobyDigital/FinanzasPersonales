@@ -40,12 +40,8 @@
       "postId": 23000
     }
   ],
-  "profile": [
-  {
-    "name": "Sergio el Kun Aguero"
-  },
-  {
-    "name": "Leonel Messi"
+  "profile": {
+    "email": "Ese36429770",
+    "password": "leoMessi@moby.com"
   }
-]
 }

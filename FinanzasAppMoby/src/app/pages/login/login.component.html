@@ -1,5 +1,3 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
 
 <head>
     <!-- Required meta tags -->
@@ -17,115 +15,130 @@
     <title>Login</title>
 </head>
 
-<body class="dropdown" data-bs-theme="light">
+<body class="bg-light">
     <Section>
         <div class="row -0">
             <div class="col-lg-6 d-flex flex-column d-none d-lg-block">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item img4 active min vh-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>knowledge is power</h5>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item img3 active min vh-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Plan your economy</h5>
-
-                            </div>
-                        </div>
-
+                      <div class="carousel-item active">
+                        <img src="../../../assets/Logos/Iso color.png" class="d-block w-100" alt="Fondo">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./../../assets/Logos/Iso color.png" class="d-block w-100" alt="Fondo">
+                      </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
                     </button>
-                </div>
+                  </div>
             </div>
             <div class="col-lg-6 d-flex flex-column">
-                <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
-                    <img src="zcash.svg" class="img-fluid" alt="Institutional Logo">
-                </div>
-                <div class="px-lg-5 py-lg-4 p4 text-center">
+                <div class="text-center">
+                    <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
+                        <img src="../../../assets/Logos/BallenaColor.svg" class="img-center" alt="Institutional Logo">
+                    </div>
+                </div>    
+                <div class="px-lg-5 py-lg-4 p4 text-end">
                     <h1 class="font-weight-bold mb-4">Welcome</h1>
-                    <form>
+                    <form [formGroup]="form" (ngSubmit)="($event)">
                         <div class="mb-4">
                             <label for="exampleInputEmail1" class="form-label font-weight-bold">Email</label>
-                            <input type="email" class="form-control border-0" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <span class="border border-primary">
+                                <input type="email" [formControl]="accesEmail" class="form-control border-2" name="accesEmail"
+                                    aria-describedby="emailHelp">
+                                    <div *ngIf="accesEmail?.invalid && (accesEmail?.dirty || accesEmail?.touched)" class="text-danger">
+                                        <div *ngIf="accesEmail?.errors?.['required']">
+                                            Email is required
+                                        </div>
+                                        <div *ngIf="accesEmail?.errors?.['email']">
+                                            The email format is wrong
+                                        </div>
+                                    </div>
+                            </span>
                         </div>
                         <div class="mb-4">
                             <label for="exampleInputPassword1" class="form-label font-weight-bold">Password</label>
-                            <input type="password" class="form-control border-0 mb-2" id="exampleInputPassword1">
-                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" id="emailHelp" class="form-text text-muted text-decoration-none">Create account</a>
+                            <input type="password" [formControl]="accesPass" class="form-control border-2 mb-2" name="accesPass">
+                                <div *ngIf="accesPass?.invalid && (accesPass?.dirty || accesPass?.touched)" class="text-danger">
+                                    <div *ngIf="accesPass?.errors?.['required']">
+                                        Password is required
+                                    </div>
+                                </div>
+                            <a href="#" id="emailHelp" class="form-text text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#ModalLabelPass">Did you forget
+                                your password?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" routerLink="/home">Go!</button>
+                        <button type="submit" class="btn btn-primary w-100" id="gobutton" (click)="login()">Go!</button>
                     </form>
                     <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p4">
-                        <a class="text-light font-weight-bold text-decoration-none" href="#">Create new account</a>
+                        <a href="#"  class="form-text text-muted text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">Create new account</a>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </Section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create account</h1>
+                    <div class="text-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="EmailCreate" >
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Password</label>
+                            <input type="email" class="form-control" id="PasswordCreate" >
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: 1rem;" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-sm" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .3rem; --bs-btn-font-size: 1rem;">
+                    Save changes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="modal" tabindex="-1" id="ModalLabelPass">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="EmailRecuperate" >
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+
+   
 </body>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Create new account</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Email</label>
-            <input type="text" class="form-control" id="recipient-name"required>
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Confirm email</label>
-            <input type="text" class="form-control" id="recipient-name"required>
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword"required>
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Confirm password</label>
-            <input type="password" class="form-control" id="inputPassword" required>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Create</button>
-      </div>
-    </div>
-  </div>
-</div>
-</html>
