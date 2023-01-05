@@ -33,10 +33,18 @@ namespace Business
         /// <returns>devuelve un json con los datos actualizados</returns>
         public IngresosFuturo modificarIngresosFuturo(FinanzasPersonalesContext db, int id, string Detalle, int Monto)
         {
-            IngresosFuturo? oIngresoViejo = db.IngresosFuturos.FirstOrDefault(a => a.IdIngresosFuturos == id);
-            oIngresoViejo.Detalle = Detalle;
-            oIngresoViejo.Monto = Monto;
-            db.SaveChanges();
+            IngresosFuturo? oIngresoViejo = new IngresosFuturo();
+            if (Detalle != null)
+            {
+                oIngresoViejo.IdIngresosFuturos = id;
+                oIngresoViejo.Detalle = Detalle;
+                db.SaveChanges();
+            }
+            else
+            {
+                return null;
+            }
+            db.IngresosFuturos.First(a => a.IdIngresosFuturos == id);
             return oIngresoViejo;
         }
 
@@ -49,6 +57,24 @@ namespace Business
         public IngresosFuturo? obtenerIngresosFuturo(FinanzasPersonalesContext db, int id)
         {
             return db.IngresosFuturos.FirstOrDefault(a => a.IdIngresosFuturos == id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IngresosFuturo eliminarIngresosFuturo(FinanzasPersonalesContext db, int id)
+        {
+            IngresosFuturo? oIngresoViejo = db.IngresosFuturos.Find(id);
+            if (oIngresoViejo == null)
+            {
+                return null;
+            }
+            db.Remove(oIngresoViejo);
+            db.SaveChanges();
+            return oIngresoViejo;
         }
     }
 }

@@ -10,10 +10,10 @@ namespace Finanzas_Personal_App.Controllers
     public class IngresosFuturosController : ControllerBase
     {
         /// <summary>
-        /// 
+        /// este metodo obtiene un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>devuelve un json con los datos del id</returns>
         [HttpGet("{id}")]
         public IngresosFuturo? Get(int id)
         {
@@ -26,7 +26,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un ingreso  por id
         /// </summary>
         /// <param name="oingresosFuturo"></param>
         [HttpPost]
@@ -42,7 +42,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Detalle"></param>
@@ -53,6 +53,19 @@ namespace Finanzas_Personal_App.Controllers
             using (var db = new FinanzasPersonalesContext())
             {
                 new IngresosFuturoBC().modificarIngresosFuturo(db, id, Detalle, Monto);
+            }
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new IngresosFuturoBC().eliminarIngresosFuturo(db, id);
             }
 
         }

@@ -9,12 +9,12 @@ namespace Finanzas_Personal_App.Controllers
     [ApiController]
     public class SaldosController : ControllerBase
     {
-        
+
         /// <summary>
-        /// 
+        /// este metodo obtiene un saldo  por id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>devuelve un json con los datos por id</returns>
         [HttpGet("{id}")]
         public Saldo? Get(int id)
         {
@@ -27,7 +27,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un saldo  por id
         /// </summary>
         /// <param name="osaldo"></param>
         [HttpPost]
@@ -43,7 +43,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un saldo  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Detalle"></param>
@@ -57,7 +57,19 @@ namespace Finanzas_Personal_App.Controllers
             }
 
         }
+        /// <summary>
+        /// este metodo elimina un registro
+        /// </summary>
+        /// <param name="id"></param>
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new SaldoBC().eliminarSaldo(db, id);
+            }
 
+        }
 
     }
 }

@@ -11,10 +11,10 @@ namespace Finanzas_Personal_App.Controllers
     {
 
         /// <summary>
-        /// 
+        /// este metodo obtiene un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>devuelve un json con los datos del id</returns>
         [HttpGet("{id}")]
         public Ingreso? Get(int id)
         {
@@ -27,7 +27,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo agrega un ingreso  por id
         /// </summary>
         /// <param name="oIngreso"></param>
         [HttpPost]
@@ -43,7 +43,7 @@ namespace Finanzas_Personal_App.Controllers
 
 
         /// <summary>
-        /// 
+        /// este metodo actualiza un ingreso  por id
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Detalle"></param>
@@ -54,6 +54,19 @@ namespace Finanzas_Personal_App.Controllers
             using (var db = new FinanzasPersonalesContext())
             {
                 new IngresoBC().modificarIngreso(db, id, Detalle, Monto);
+            }
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            using (var db = new FinanzasPersonalesContext())
+            {
+                new IngresoBC().eliminarIngreso(db, id);
             }
 
         }
