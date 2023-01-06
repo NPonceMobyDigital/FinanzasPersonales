@@ -1,0 +1,68 @@
+.total{
+    font-size: 39px;
+    font-weight: bold;
+    margin-left: 868px;
+    color: rgb(12,108,252);
+
+  }
+  .totaln{
+    font-size: 38px;
+    float: right;
+    color: rgb(12,108,252);
+
+  }
+
+  .alert {
+    margin-top: 14px;
+    background-color: #e9ecef;
+  }
+
+  #botoncalcular {
+    margin-left: 90%;
+    width: 10%;
+    font-weight: bold;
+
+
+  }
+
+ #btnagregar{
+    font-weight: bold;
+    margin-top: -110px;
+    width: 10%;
+    margin-left: 90%;
+
+  }
+
+  #btndescarga{
+    font-weight: bold;
+    width: 50%;
+    margin-left: 50%;
+  }
+
+#form{
+  font-family: revert;
+      font-size: 18px;
+}
+
+.col{
+    margin-block: 10px;
+    font-size: 21px;
+}
+
+#gastosMensuales{
+    font-size: 25px;
+    color: rgb(12,108,252);
+    font-weight: bold;
+}
+
+#ingresoMensuales{
+  font-size: 25px;
+  color: rgb(12,108,252);
+  font-weight: bold;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+  font-size: 21px;
+}

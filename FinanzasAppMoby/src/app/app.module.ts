@@ -10,6 +10,7 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { DownloadsComponent } from './others/downloads/downloads.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
