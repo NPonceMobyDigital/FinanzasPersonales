@@ -7,10 +7,10 @@
                     <div class="row">
                         <div class="col-lg-9 col-md-8">
                         <h2>{{profile[0].name}} </h2>
-                        <p class="lead text-muted">Información de Cuenta SERGIO</p>
+                        <p class="lead text-muted">Información de Cuenta </p>
                         </div>
                         <div class="col-lg-3 col-md-4 d-flex">
-                        <button class="btn btn-primary w-100 align-self-center" routerLink="/downloads">Report</button>
+                        <button class="btn btn-primary  align-self-center" routerLink="/downloads" id="btndescarga">Descargar Comprobante</button>
                         </div>
                     </div>
                 </div>
@@ -90,26 +90,26 @@
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Ingresos Mensuales Promedio</h6>
-                                        <h3 class="font-weight-bold">$50000</h3>
+                                        <h3 class="font-weight-bold">$150000</h3>
                                         
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Gastos</h6>
-                                        <h3 class="font-weight-bold">100</h3>
+                                        <h3 class="font-weight-bold">$60000</h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex stat my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Ahorros</h6>
-                                        <h3 class="font-weight-bold">2500</h3>
+                                        <h3 class="font-weight-bold">$2500</h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6 d-flex my-3">
                                     <div class="mx-auto">
                                         <h6 class="text-muted">Inversion</h6>
-                                        <h3 class="font-weight-bold">500</h3>
+                                        <h3 class="font-weight-bold">$5000</h3>
                                     </div>
                                 </div>
                             </div>
@@ -126,74 +126,104 @@
                                 <h6 class="font-weight-bold mb-0">Balances</h6>
                                 </div>
                                 <div class="card-body">
-            
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" >INGRESO MENSUAL</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input  id="ingresomensual" placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
-                                <label class="gastosMensuales"><br>GASTOS MENSUALES</label> 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label">Alquiler</label>  
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input  id="alquiler" placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
+                                    <div class="form-group">
+                                        <label  id="ingresoMensuales" >INGRESO MENSUAL</label> 
+                                          <div class="col-md-4 inputGroupContainer">
+                                          <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input  id="ingresomensual" placeholder="$" class="form-control"  type="number">
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="col-auto" >
+                                          <button type="submit" class="btn btn-primary" id="btnagregar" (click)="addExpenses">Agregar Gasto +</button>
+                                        </div>
+                                        <!--!>boton dinamico 
+                                        <form [formGroup]="formParent" class="formParent">
+                                            <div class="form-field">
+                                                <input type="text" placeholder="Nuevo Gasto" formControlName="name">
+                                            </div>
+                                            <div class="form-grid" formArrayName="expenses">
+                                                <div class="form-field" *ngFor="let expenses of getCtrl('expenses', formParent)?.controls;index as i">
+                                                    <div class="form-block" [formGroupName]="i">
+                                                        <div class="form-field">
+                                                            <input type="text" placeholder="Nombre" formControlName="name">
+                                                        </div>
+                                                        <div class="form-field">
+                                                            <input type="text" placeholder="Gasto" formControlName="expenses">
+                                                        </div>
 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" >Agua/Electricidad/Gas</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="firstnumber"  placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
-            
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" >Internet</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                    <span  class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="secondnumber" placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label" >Cable</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input  placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
-                                
-                                        <div class="form-group">
-                                    <label class="col-md-4 control-label">Celular</label>  
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input  placeholder="$" class="form-control"  type="number">
-                                    </div>
-                                    </div>
-                                </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </form>
+                                        <!-->
+                                      </div>
+                                      
+                                      <div>
+                                        <label id="gastosMensuales"><br>GASTOS MENSUALES</label> 
+                                      </div>
+                                      <div class="form-group">
+                                        
+                                          <form>
+                                            <div class="row">
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Alquiler</label>  
+                                                <input id="firstnumber" type="text" class="form-control" placeholder="$">
+                                              </div>
+                                              
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Internet</label>  
+                                                <input id="secondnumber"type="number" class="form-control" placeholder="$">
+                                              </div>
+                                            </div>
+                                          </form>
+                                      </div>
+  
+                                        
+                                          <form>
+                                            <div class="row">
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Celular</label>  
+  
+                                                <input type="text" class="form-control" placeholder="$">
+                                              </div>
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Cable</label>  
+  
+                                                <input type="number" class="form-control" placeholder="$">
+                                              </div>
+                                            </div>
+                                          </form>
+  
+                                      
+                                          
+                                        
+                                          <form>
+                                            <div class="row">
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Mascotas</label>  
+                                                <input type="text" class="form-control" placeholder="$">
+                                              </div>
+                                              
+                                              <div class="col">
+                                                <label class="col-md-4 control-label">Supermercado</label>  
+                                                <input type="number" class="form-control" placeholder="$">
+                                              </div>
+                                            </div>
+                                          </form>
                                 <br>
-                                <button onClick="resta()" class="btn btn-primary w-100">Calcular</button>
+                                <button  class="btn btn-primary" id="botoncalcular">Calcular</button>
             
                                 <div class="alert alert-success" id="final">
-                                    <strong>TOTAL</strong> 
-                                    <div >0000</div>
-                                
-                                </div>
+                                         
+                                    <strong class="total">TOTAL:</strong> 
+                                    
+                                    <div class="totaln" >$0000</div>
+                                  
+                                  </div>
                                 
                                 </div>
                                 
